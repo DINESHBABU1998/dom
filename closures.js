@@ -84,4 +84,21 @@
 // }
 // var innerFunc = OuterFunction();
 
-// innerFunc();                
+// innerFunc();  
+
+//Take a variable in outer function and create an inner function to increase the counter every time it is called
+function Outerfunc(){
+    let count=0;
+    return function Innerfunc(){
+     return count++;
+    }
+}
+let getFunction=Outerfunc();
+console.log(getFunction());
+console.log(getFunction());
+console.log(getFunction());
+console.log(getFunction());
+console.log(getFunction());
+console.log(getFunction());
+console.log(getFunction());
+console.log(getFunction());
